@@ -12,8 +12,8 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             const { weather_descriptions: description, temperature, feelslike, humidity } = body.current
 
-            const temperatureDegrees = temperature === 1 ? 'degrees' : 'degree'
-            const feelslikeDegrees = feelslike === 1 ? 'degrees' : 'degree'
+            const temperatureDegrees = temperature === 1 ? 'degree' : 'degrees'
+            const feelslikeDegrees = feelslike === 1 ? 'degree' : 'degrees'
 
             callback(undefined, `${description[0]}. It is currently ${temperature} ${temperatureDegrees} out. It feels like ${feelslike} ${feelslikeDegrees}. The humidity is ${humidity}%.`)
         }
