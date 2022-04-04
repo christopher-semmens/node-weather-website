@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error.info, undefined)
         } else {
-            const { weather_descriptions: description, temperature, feelslike } = body.current
+            const { weather_descriptions: description, temperature, feelslike, humidity } = body.current
 
             const temperatureDegrees = temperature === 1 ? 'degrees' : 'degree'
             const feelslikeDegrees = feelslike === 1 ? 'degrees' : 'degree'
